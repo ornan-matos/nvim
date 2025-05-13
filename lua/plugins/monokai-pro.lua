@@ -4,7 +4,7 @@ return {
     priority = 1000,
     config = function()
       require("monokai-pro").setup({
-        transparent_background = true,
+        transparent_background = false,
         terminal_colors = true,
         devicons = true,
         styles = {
