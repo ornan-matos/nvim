@@ -11,7 +11,7 @@ return {
 
       -- Número de linhas
       opt.number = true
-      opt.relativenumber = true
+      opt.relativenumber = false
 
       -- Scroll fixo
       opt.scrolloff = 8
