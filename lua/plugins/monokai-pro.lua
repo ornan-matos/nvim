@@ -23,10 +23,5 @@ return {
       vim.api.nvim_set_hl(0, "TelescopeBorder", { bg = "none" })
     end,
   },
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "monokai-pro",
-    },
-  },
 }
+
