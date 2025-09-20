@@ -1,28 +1,46 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
--- Customize Mason
-
 ---@type LazySpec
 return {
-  -- use mason-tool-installer for automatically installing Mason packages
-  {
-    "WhoIsSethDaniel/mason-tool-installer.nvim",
-    -- overrides `require("mason-tool-installer").setup(...)`
-    opts = {
-      -- Make sure to use the names found in `:Mason`
-      ensure_installed = {
-        -- install language servers
-        "lua-language-server",
+	{
+		"WhoIsSethDaniel/mason-tool-installer.nvim",
+		opts = {
+			-- A lista de todas as ferramentas que o Mason deve garantir que estejam instaladas.
+			ensure_installed = {
+				-- Language Servers (LSPs)
+				"ansible-language-server",
+				"bash-language-server",
+				"clangd",
+				"csharp-language-server",
+				"css-lsp",
+				"docker-compose-language-service",
+				"dockerfile-language-server",
+				"dot-language-server",
+				"gopls",
+				"html-lsp",
+				"json-lsp",
+				"lua-language-server",
+				"pyright",
+				"ruff", -- ruff também atua como um LSP
+				"sqlls",
+				"tailwindcss-language-server",
+				"terraform-ls",
+				"typescript-language-server",
+				"vim-language-server",
+				"yaml-language-server",
 
-        -- install formatters
-        "stylua",
+				-- Linters e Formatters
+				"black",
+				"csharpier",
+				"isort",
+				"sqlfmt",
+				"stylua",
 
-        -- install debuggers
-        "debugpy",
+				-- Debuggers
+				"debugpy",
 
-        -- install any other package
-        "tree-sitter-cli",
-      },
-    },
-  },
+				-- Outras Ferramentas
+				"terraform",
+				"tree-sitter-cli",
+			},
+		},
+	},
 }
