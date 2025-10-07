@@ -8,22 +8,12 @@ return {
 				-- Language Servers (LSPs)
 				"ansible-language-server",
 				"bash-language-server",
-				"clangd",
-				"csharp-language-server",
-				"css-lsp",
 				"docker-compose-language-service",
 				"dockerfile-language-server",
-				"dot-language-server",
-				"gopls",
-				"html-lsp",
 				"json-lsp",
 				"lua-language-server",
 				"pyright",
-				"ruff", -- ruff também atua como um LSP
-				"sqlls",
-				"tailwindcss-language-server",
 				"terraform-ls",
-				"typescript-language-server",
 				"vim-language-server",
 				"yaml-language-server",
 
