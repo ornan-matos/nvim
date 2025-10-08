@@ -12,3 +12,18 @@ vim.opt.showbreak = "↪ " -- indicador visual para linha quebrada
 -- Mostrar números de linha absolutos
 vim.opt.number = true
 vim.opt.relativenumber = false -- desativar numeração dinâmica
+
+-- Força o uso do OSC 52 para clipboard em sessões SSH
+if vim.env.SSH_TTY then
+	vim.g.clipboard = {
+		name = "OSC 52",
+		copy = {
+			["+"] = require("vim.ui.clipboard.osc52").copy("+"),
+			["*"] = require("vim.ui.clipboard.osc52").copy("*"),
+		},
+		paste = {
+			["+"] = require("vim.ui.clipboard.osc52").paste("+"),
+			["*"] = require("vim.ui.clipboard.osc52").paste("*"),
+		},
+	}
+end
