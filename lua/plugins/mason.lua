@@ -19,7 +19,6 @@ return {
 
 				-- Linters e Formatters
 				"black",
-				"csharpier",
 				"isort",
 				"sqlfmt",
 				"stylua",
