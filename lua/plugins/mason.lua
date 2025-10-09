@@ -16,6 +16,7 @@ return {
 				"terraform-ls",
 				"vim-language-server",
 				"yaml-language-server",
+				"yamlls",
 
 				-- Linters e Formatters
 				"black",
