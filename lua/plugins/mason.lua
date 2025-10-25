@@ -21,7 +21,6 @@ return {
 				"pyright",
 				"ruff", -- ruff também atua como um LSP
 				"sqlls",
-				"tailwindcss-language-server",
 				"terraform-ls",
 				"typescript-language-server",
 				"vim-language-server",
