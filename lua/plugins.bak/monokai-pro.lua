@@ -62,25 +62,6 @@ return {
 					for _, group in ipairs(hl_groups) do
 						vim.api.nvim_set_hl(0, group, { bg = "none" })
 					end
-
-					-- Força os contadores de git diff a usarem fundo de bolha
-					-- (remove as bordas pretas e os fundos coloridos)
-					local pill = "#dcdfe7"
-					local pill_fg = "#2c2e34"
-					local diff_groups = {
-						"GitSignsAdd",
-						"GitSignsChange",
-						"GitSignsDelete",
-						"diffAdded",
-						"diffChanged",
-						"diffRemoved",
-						"DiffAdd",
-						"DiffChange",
-						"DiffDelete",
-					}
-					for _, g in ipairs(diff_groups) do
-						vim.api.nvim_set_hl(0, g, { bg = pill, fg = pill_fg })
-					end
 				end,
 			})
 
@@ -92,4 +73,3 @@ return {
 		end,
 	},
 }
-

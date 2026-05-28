@@ -37,16 +37,22 @@ return {
 					hl[comp .. "_fg"] = pill_fg
 				end
 
-				-- Git diff: o surround usa "git_diff_bg"; o texto usa git_added/changed/removed
-				hl.git_diff_bg = pill_bg
-				hl.git_diff_fg = pill_fg
-				hl.git_added = "#4f8f3f"
-				hl.git_changed = "#b07d1f"
-				hl.git_removed = "#c0392b"
+				-- Git diff: mesmo fundo da bolha + cores semânticas no texto
+				hl.git_diff_added_bg = pill_bg
+				hl.git_diff_changed_bg = pill_bg
+				hl.git_diff_removed_bg = pill_bg
+				hl.git_diff_added_fg = "#4f8f3f"
+				hl.git_diff_changed_fg = "#b07d1f"
+				hl.git_diff_removed_fg = "#c0392b"
 
-				-- LSP
+				-- LSP - variações de nome
 				hl.lsp_bg = pill_bg
 				hl.lsp_fg = pill_fg
+
+				-- Git diff - o nome real costuma ser sem "diff"
+				-- (já tentamos git_added e git_diff_added; falta o surround do bloco)
+				hl.git_bg = pill_bg
+				hl.git_fg = pill_fg
 
 				-- Nav (posição / linha:coluna)
 				hl.nav_bg = pill_bg

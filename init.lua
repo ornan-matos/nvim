@@ -26,4 +26,5 @@ end
 vim.env.PATH = vim.fn.stdpath("data") .. "/mason/bin:" .. vim.env.PATH
 require "lazy_setup"
 require "polish"
-vim.cmd("colorscheme monokai-pro")
+vim.cmd("colorscheme monokai-v2")
+-- vim.cmd("colorscheme monokai-pro")
