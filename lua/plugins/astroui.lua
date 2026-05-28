@@ -57,6 +57,28 @@ return {
 				hl.tab_inactive_bg = "#cacdd7"
 				hl.tab_inactive_fg = "#6b6e78"
 
+				-- ===== BARRA SUPERIOR: tabline / buffers (AstroNvim nativo) =====
+				-- Buffer ativo (arquivo atual) → bolha clara
+				hl.buffer_active_bg = pill_bg
+				hl.buffer_active_fg = pill_fg
+				-- Buffer visível (aberto em split) → bolha clara
+				hl.buffer_visible_bg = pill_bg
+				hl.buffer_visible_fg = pill_fg
+				-- Buffer inativo → cinza um pouco mais escuro p/ distinguir
+				hl.buffer_bg = "#cacdd7"
+				hl.buffer_fg = "#6b6e78"
+
+				-- Ícone de arquivo dentro do botão (segue o mesmo fundo)
+				hl.buffer_active_file_icon_bg = pill_bg
+				hl.buffer_visible_file_icon_bg = pill_bg
+				hl.buffer_file_icon_bg = "#cacdd7"
+
+				-- Indicador de modificado (•) dentro do botão
+				hl.buffer_active_file_modified_bg = pill_bg
+				hl.buffer_active_file_modified_fg = pill_fg
+				hl.buffer_visible_file_modified_bg = pill_bg
+				hl.buffer_file_modified_bg = "#cacdd7"
+
 				return hl
 			end,
 
@@ -64,7 +86,7 @@ return {
 				none = { "", "" },
 				left = { vim.fn.nr2char(0xe0b6), vim.fn.nr2char(0xe0b4) .. "  " },
 				right = { "  " .. vim.fn.nr2char(0xe0b6), vim.fn.nr2char(0xe0b4) },
-				tab = { "", "" },
+				tab = { vim.fn.nr2char(0xe0b6), vim.fn.nr2char(0xe0b4) },
 			},
 		},
 
